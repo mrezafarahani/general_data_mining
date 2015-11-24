@@ -5,13 +5,14 @@ import math
 def entropy(dataset):
     ent = 0
     all_len = len(dataset)
-    lable = {}
+    lables = {}
     for i in dataset:
-        if i in lable:
-            lable[i] += 1
+        if i in lables:
+            lables[i] += 1
         else:
-            lable[i] = 1
-    for i in lable:
-        p = float(lable[i])/all_len
-        ent += -p * math.log(p,2)
+            lables[i] = 1
+    number_of_symbols = len(lables)
+    for i in lables:
+        p = float(lables[i])/all_len
+        ent += -p * math.log(p,number_of_symbols)
     return ent
