@@ -7,9 +7,8 @@ Set of simple data mining functions
 1. entropy
 
 example:
-
+'''python
 from datamining import entropy
-
 a = [1,2,1,2,3,1,1,1,2,1,1]
-
 ent = entropy(a)
+'''
